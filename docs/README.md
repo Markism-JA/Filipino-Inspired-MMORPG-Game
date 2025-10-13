@@ -11,7 +11,7 @@
 | `technical/` | System architecture, backend design, API specs, infrastructure |
 | `thesis/` | Source files for our research manuscript (Markdown → .docx via CI) |
 | `templates/` | Document and report templates (e.g., adviser consult form) |
-| `decisions/` | Record of all major team and technical decisions serves as history|
+| `decisions/` | Record of all major team and technical decisions, serves as history|
 
 ---
 
@@ -20,10 +20,13 @@
 - **Format:** All documentation is in Markdown (`.md`) format.
 - **Branch:** Use a `docs/<topic>` branch for major documentation changes.
 - **Pull Requests:** Required for every update to ensure consistency.
-- **File Naming:** Use UPPERCASE + underscores for major documents (e.g., `GDD.md`).
+- **File Naming:**
+    - Use UPPERCASE + underscores for major documents (e.g., `GDD.md`).
+    - use lowercase + hypen for minor documents.
 - **Single Source of Truth:** This folder, not Google Drive, is the official doc base.
 
-> Google Drive copies (for submission) are generated automatically by the build system.
+> Google Drive copies (for submission) are generated automatically by the build system.  
+  The lead dev would be responsible for the CD pipeline for this.
 
 ---
 
@@ -40,34 +43,35 @@ Our GitHub Actions pipeline handles:
 
 ## Contribution Workflow
 
-1. **Create or edit** Markdown docs locally or via GitHub’s editor.  
-2. **Commit** to your `docs/<topic>` branch.  
-3. **Open a Pull Request** to `dev` for review.  
+1. **Create or edit** Markdown docs locally or via GitHub’s editor.
+2. **Commit** to your `docs/<topic>` branch.
+3. **Open a Pull Request** to `dev` for review.
 4. After approval, the doc build workflow will run automatically.
 
 Example branch:
-
-docs/update-gdd-combat-system
-
+```
+```
+git branch docs/update-gdd-combat-system
+```
+```
 
 ---
 
 ## Quick Links
 
-- [Team Guide](team/TEAM_GUIDE.md)
-- [Game Design Document](game_design/GDD.md)
-- [Server Architecture Overview](technical/SERVER_ARCHITECTURE.md)
-- [Thesis Manuscript (Markdown)](thesis/01_INTRODUCTION.md)
+- [Team Guide](team/README.md)
+- [Game Design Document](game_design/README.md)
+- [Server Architecture Overview](technical/README.md)
+- [Thesis Manuscript (Markdown)](thesis/README.md)
 
 ---
 
-## Notes for New Members
+## Notes for Members
 
-- If you’re assigned to thesis writing, **never edit `.docx` directly**.  
-  Work in Markdown — the system will handle formatting.
+- If you’re assigned to thesis writing, **never edit `.docx` directly**.  Work in Markdown — the system will handle formatting.
 - If you’re a developer, **update technical docs when systems change**.
 - Keep documentation changes **in sync with code**.
 
 ---
 
-> _Maintained by the Lead Developer & Research Lead. Updated as team conventions evolve._
+> _Maintained by the Lead Developer. Updated as team conventions evolve._
