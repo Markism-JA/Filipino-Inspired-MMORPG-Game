@@ -1,6 +1,6 @@
 # Tokenomics Flow
 
-![Tokenomics Flow Diagram](docs/game_design/assets/tokenomics_flowchart.svg)
+**![Tokenomics Flow Diagram](docs/game_design/assets/tokenomics_flowchart.svg)**
 
 ---
 
