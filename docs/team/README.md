@@ -1,8 +1,6 @@
 # Team Guide
 
-This directory defines the **standards, workflows, and governance structure** that guide how the development team collaborates and delivers work.
-
----
+This directory defines the **standards, workflows, and governance structure** that guide how we develop.
 
 ## Folder Structure
 
