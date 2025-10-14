@@ -49,10 +49,8 @@ Our GitHub Actions pipeline handles:
 4. After approval, the doc build workflow will run automatically.
 
 Example branch:
-```
-```
+```bash
 git branch docs/update-gdd-combat-system
-```
 ```
 
 ---
@@ -69,7 +67,7 @@ git branch docs/update-gdd-combat-system
 ## Notes for Members
 
 - If you’re assigned to thesis writing, **never edit `.docx` directly**.  Work in Markdown — the system will handle formatting.
-- If you’re a developer, **update technical docs when systems change**.
+- **Update technical docs when systems change**.
 - Keep documentation changes **in sync with code**.
 
 ---
