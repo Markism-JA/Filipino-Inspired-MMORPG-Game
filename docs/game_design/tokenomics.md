@@ -1,6 +1,6 @@
 # Tokenomics Flow
 
-![Tokenomics Flow Diagram](assets/tokenomics-diagram.svg)
+![Tokenomics Flow Diagram](docs/game_design/assets/tokenomics_flowchart.svg)
 
 ---
 
@@ -61,7 +61,4 @@ This diagram illustrates the flow of tokens within the ecosystem, showing how in
 - **BAKU:** Blockchain-based token that bridges the in-game and real-world economies.  
 - **DEX:** Decentralized Exchange platform enabling crypto-to-crypto trading.  
 
----
 
-## Tokenomics Flowchart
-![Tokenomics Flowchart](docs/game_design/assets/tokenomics_flowchart.svg)
