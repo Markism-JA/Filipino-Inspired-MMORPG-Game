@@ -12,7 +12,7 @@ Each development cycle starts with a planning meeting. The meeting follows a sta
 
 2. **Branch Creation**
 
-Each member creates a branch to work on their assigned issues. Refer to [Branching Rules](branching/branch-creation) for branch creation guidelines.
+Each member creates a branch to work on their assigned issues. Refer to [Branching Rules](branching.md#branch-creation) for branch creation guidelines.
 
 3. **Development**
 
