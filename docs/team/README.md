@@ -13,6 +13,7 @@ This directory defines the **standards, workflows, and governance structure** th
 | `roles-and-responsibility` |  Governance and accountability |
 | `workflow` |  General Development Workflow |
 | `pull-request` |  PR Guidelines |
+| `decisions` |  Guidelines on how we make key decisions. |
 
 ## Purpose
 
