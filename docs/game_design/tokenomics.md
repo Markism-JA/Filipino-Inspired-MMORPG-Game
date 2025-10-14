@@ -1,6 +1,6 @@
 # Tokenomics Flow
 
-**![Tokenomics Flow Diagram](docs/game_design/assets/tokenomics_flowchart.svg)**
+**![Tokenomics Flow Diagram](assets/tokenomics_flowchart.svg)**
 
 ---
 
@@ -60,6 +60,7 @@ This diagram illustrates the flow of tokens within the ecosystem, showing how in
 - **PEARL (Perlas):** Primary in-game currency earned through gameplay.  
 - **BAKU:** Blockchain-based token that bridges the in-game and real-world economies.  
 - **DEX:** Decentralized Exchange platform enabling crypto-to-crypto trading.  
+
 
 
 
