@@ -44,7 +44,7 @@
        <cp nameU="EndDate" lbl="End Date" type="5" langID="1033" val="0"/>
        <cp nameU="Status" lbl="Status" type="4" langID="1033"/>
       </custProps>
-      <path d="M0,0 L96.703193665,0 L96.703193665,0 L96.703193665,54.885601044 L96.703193665,54.885601044 L0,54.885601044 L0,54.885601044 L0,0 Z" stroke="#000000" stroke-width="0.75" stroke-linecap="round" fill="none" stroke-opacity="0"/>
+      <path d="M0,0 L96.703193665,0 L96.703193665,0 L96.703193665,54.885601044 L96.703193665,54.885601044 L0,54.885601044 L0,54.885601044 L0,0 Z" stroke="#000000" stroke-width="0.75" stroke-linecap="round" fill="none" stroke-opacity="1"/>
      </g>
      <path d="M0,0 L96.703193665,0 L96.703193665,0 L96.703193665,54.885601044 L96.703193665,54.885601044 L0,54.885601044 L0,54.885601044 L0,0 Z" stroke="#000000" stroke-width="0.75" stroke-linecap="round" fill="#FFFFFF"  fill-rule="evenodd"/>
      <g transform="matrix(1,0,0,1,0,0)">
