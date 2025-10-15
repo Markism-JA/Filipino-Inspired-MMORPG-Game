@@ -1,8 +1,6 @@
 # Team Guide
 
-This directory defines the **standards, workflows, and governance structure** that guide how the development team collaborates and delivers work.
-
----
+This directory defines the **standards, workflows, and governance structure** that guide how we develop.
 
 ## Folder Structure
 
@@ -14,6 +12,8 @@ This directory defines the **standards, workflows, and governance structure** th
 | `communication` | Communication protocols and channels |
 | `roles-and-responsibility` |  Governance and accountability |
 | `workflow` |  General Development Workflow |
+| `pull-request` |  PR Guidelines |
+| `decisions` |  Guidelines on how we make key decisions. |
 
 ## Purpose
 

@@ -1,7 +1,5 @@
 # Project Documentation Guide
 
----
-
 ## Folder Structure
 
 | Folder | Description |
@@ -12,8 +10,6 @@
 | `thesis/` | Source files for our research manuscript (Markdown → .docx via CI) |
 | `templates/` | Document and report templates (e.g., adviser consult form) |
 | `decisions/` | Record of all major team and technical decisions, serves as history|
-
----
 
 ## Conventions
 
@@ -28,8 +24,6 @@
 > Google Drive copies (for submission) are generated automatically by the build system.  
   The lead dev would be responsible for the CD pipeline for this.
 
----
-
 ##  Automated Document Builds
 
 Our GitHub Actions pipeline handles:
@@ -39,8 +33,6 @@ Our GitHub Actions pipeline handles:
 
 **No generated files are stored in the repo.**
 
----
-
 ## Contribution Workflow
 
 1. **Create or edit** Markdown docs locally or via GitHub’s editor.
@@ -49,13 +41,9 @@ Our GitHub Actions pipeline handles:
 4. After approval, the doc build workflow will run automatically.
 
 Example branch:
-```
-```
+```bash
 git branch docs/update-gdd-combat-system
 ```
-```
-
----
 
 ## Quick Links
 
@@ -64,14 +52,10 @@ git branch docs/update-gdd-combat-system
 - [Server Architecture Overview](technical/README.md)
 - [Thesis Manuscript (Markdown)](thesis/README.md)
 
----
-
 ## Notes for Members
 
 - If you’re assigned to thesis writing, **never edit `.docx` directly**.  Work in Markdown — the system will handle formatting.
-- If you’re a developer, **update technical docs when systems change**.
+- **Update technical docs when systems change**.
 - Keep documentation changes **in sync with code**.
-
----
 
 > _Maintained by the Lead Developer. Updated as team conventions evolve._

@@ -1,3 +1,58 @@
+# Branching Guidelines
+## Branch Creation
+
+ This applies to both **documentation** and **code development**.
+
+### 1. Documentation Branches
+- **Purpose:** For tasks related to updating or adding documentation only.
+- **Naming Convention:**
+```
+docs/<issue-number>-<short-descriptive-branch-name>
+```
+- **Example:**
+- Issue #42 is about updating the API documentation:
+  ```
+  docs/42-update-api-guide
+  ```
+### 2. Feature and Bugfix Branches
+- **Purpose:** For tasks that involve coding changes, such as implementing a new feature or fixing a bug.
+- **Naming Convention:**
+```
+<type>/<issue-number>-<short-descriptive-branch-name>
+```
+Where `<type>` is:
+- `feat` → new feature
+- `fix` → bug fix
+- `chore` → minor updates or maintenance
+- `refactor` → restructuring code without changing functionality
+- **Example:**
+- Feature implementation for issue #55:
+  ```
+  feat/55-add-login-authentication
+  ```  
+- Bug fix for issue #60:
+```
+fix/60-correct-login-error
+```
+### 3. Miscellaneous Branches
+- **Purpose:** For tasks not associated with an existing issue.
+- **Naming Convention:**
+```
+<prefix>/<short-descriptive-branch-name>
+```
+- `<prefix>` should describe the nature of the work, e.g., `experiment`, `spike`, or `hotfix`.
+**Example:**
+```
+experiment/ui-redesign
+hotfix/fix-typo-footer
+```
+
+### 4. General Guidelines
+- Keep branch names **short, lowercase, and hyphen-separated**.
+- Avoid special characters (except `/` and `-`).
+- Always branch off from `develop` unless instructed otherwise.
+- Delete branches locally and remotely after the PR is merged to keep the repository clean.
+
 ## Branch Protection Rules
 
 ### For Master Branch (Production)
