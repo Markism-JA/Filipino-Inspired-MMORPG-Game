@@ -41,7 +41,10 @@ Each monster has its own unique drop, but all monsters provide common resources 
 ## **Questing**
 
 Players can accept quests or missions in the game from NPCs or events that provide rewards depending on quest difficulty and rarity.
-
+Quests can either be a Resource Gathering request or a Combat Quests (Mob Slaying).
+- Main Quests(Mandatory) - Players are required to tackle the main quests to unlock regions and increase their max lvl cap.
+- Side Quests(Optional) - Players encounter NPC's that may give them a quest finishing said objectives would reward them with resources.
+- Event Quests(Timely) - Event quests are limited-time events quests for everyone to participate, these give significantly better rewards than normal quests.
 ---
 
 ## **Inventory System**
