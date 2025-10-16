@@ -106,4 +106,4 @@ ___
 
 # Gameplay Loop
 
-![[gameplay-loop]]
+![gameplay-loop](https://github.com/user-attachments/assets/61838ac6-db2e-4bf7-adba-ab7605e1a62b)
