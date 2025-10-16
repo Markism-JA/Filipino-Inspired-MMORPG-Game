@@ -24,7 +24,7 @@ Players can interact with ores, trees, water, etc., to gather resources or gener
 
 - **Trees:** Crafting materials, foraging  
 - **Mining:** Crafting materials  
-- **Fishing:** Possible drops
+- **Fishing:** There are fishing spots or ponds ingame where players are allowed to farm pearls.
   - **Pearl:** Rarest drop — 5% chance to get 20 pearls, 1% to get 100 pearls  
   - **Fish:** Different rarities; varying drop rates depending on type  
   - **Seaweed:** Common drop — 50% chance to get  
@@ -110,6 +110,7 @@ Rites or potions provide boosts such as increased fishing rarity, attack damage,
 - Challenging areas with bosses and enemies.  
 - Require teamwork and offer better rewards than standard overworld farming.  
 - May include special timed events.
+- Clan vs Clan type of raids a statue near the largest fishing spot is to be captured by a clan.
 
 ---
 
@@ -118,7 +119,8 @@ Rites or potions provide boosts such as increased fishing rarity, attack damage,
 - A social organization of players with features like:
   - Guild house  
   - Quests  
-  - Treasury  
+  - Treasury
+  - Clans have a hierarchy system, where the leader is called datu, maharlika, maginoo etc.
 - Encourages teamwork and cooperative gameplay.
 
 ---
@@ -161,7 +163,11 @@ Rites or potions provide boosts such as increased fishing rarity, attack damage,
 ## **Character Class**
 
 - Player class depends on equipped gear and unlocked skills.  
-- Examples: Archer, Wizard, Warrior, etc.
+- Mandirigma (Warrior) — Close-range fighter; excels in sustained melee and crowd control.
+- Babaylan (Mystic) — Channeler of spiritual energy; heals and debuffs enemies.
+- Albularyo (Tactician) — Hybrid support; deploys concoctions, traps, and poisons.
+- Bagani (Ranger) — Agile ranged attacker with precision-based skill chaining.
+
 
 ---
 
