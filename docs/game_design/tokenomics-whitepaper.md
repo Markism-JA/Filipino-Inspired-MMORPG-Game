@@ -1,4 +1,3 @@
-[tokenomics_flow_formal.md](https://github.com/user-attachments/files/22941472/tokenomics_flow_formal.md)
 # Tokenomics Flow
 
 **![Tokenomics Flow Diagram](assets/tokenomics_whitepaper_flowchart.svg)**
