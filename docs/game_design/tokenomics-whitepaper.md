@@ -1,6 +1,6 @@
 # Tokenomics Flow (Player Guide)
 
-**![Tokenomics Flow Diagram](assets/tokenomics__whitepaper_flowchart.svg)**
+**![Tokenomics Flow Diagram](assets/tokenomics_whitepaper_flowchart.svg)**
 
 ---
 
