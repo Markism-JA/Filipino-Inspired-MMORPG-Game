@@ -1,55 +1,68 @@
-# Tokenomics Flow (Player Guide)
+[tokenomics_flow_formal.md](https://github.com/user-attachments/files/22941472/tokenomics_flow_formal.md)
+# Tokenomics Flow
 
 **![Tokenomics Flow Diagram](assets/tokenomics_whitepaper_flowchart.svg)**
 
 ---
 
 ## Overview
-This shows how **PEARL** and **$BAKU** move around the game — from fishing and crafting to trading and using tokens again in-game. Everything connects in a simple loop where what you earn can be used, traded, or reinvested.
+This diagram delineates the complete token flow within the ecosystem, illustrating the interaction between in-game and blockchain components. It highlights the processes through which players acquire, convert, and utilize **PEARL** and **$BAKU** tokens, establishing a sustainable circular economy that integrates gameplay with decentralized finance.
 
 ---
 
 ## Flow Steps
 
-1. **Fishing (Regular or Special Zones)**
-   - Go fishing in **Regular Zones** for normal rewards or **Special Time-Limited Zones** for bigger catches.  
-   - You’ll earn **PEARL (Perlas)**, your main in-game currency.
+1. **Fishing (Regular Zone / Special Time-Limited Zone)**
+   - Players engage in fishing within **Regular Zones** or **Special Time-Limited Zones**.  
+   - Successful fishing yields **PEARL (Perlas)**, the foundational in-game currency.  
+   - **Special Time-Limited Zones** offer increased yields and limited-time opportunities.
 
 2. **Crafting**
-   - Use **PEARL** to craft new **equipment** or **materials** that improve your gameplay.
+   - **PEARL** serves as the primary material for crafting **equipment** and **resources** within the game ecosystem.
 
 3. **Minting (PEARL → $BAKU)**
-   - You can **convert PEARL into $BAKU tokens**, making your in-game progress part of the blockchain economy.
+   - Players may **mint $BAKU tokens** by converting **PEARL**, thus transferring value from the in-game layer to the blockchain layer.  
+   - **$BAKU** represents a tradeable, on-chain asset that mirrors in-game progression.
 
 4. **Market Usage**
-   - Spend **PEARL** in the **in-game market** to buy or sell crafting materials, gear, and other items.
+   - **PEARL** remains usable within the **in-game marketplace** for transactions involving:  
+     - Crafting materials  
+     - Equipment  
+     - Other player-owned assets
 
-5. **Trading ($BAKU on DEX)**
-   - Trade **$BAKU** on a **Decentralized Exchange (DEX)** to sell it for crypto or buy more with USDT.
+5. **DEX Listing**
+   - **$BAKU tokens** can be **listed on Decentralized Exchanges (DEX)**, enabling open crypto-to-crypto trading.
 
-6. **Holding**
-   - Keep **$BAKU** in your wallet like any other cryptocurrency — use it later or hold it as an investment.
+6. **Trading**
+   - **Sellers** exchange **$BAKU** for cryptocurrencies such as **USDT** and etc.  
+   - **Buyers** acquire **$BAKU** via supported tokens on the DEX.
 
-7. **Utilization (Back to Game)**
-   - Bring **$BAKU** back into the game anytime to buy, trade, or reinvest in your in-game assets.
+7. **Holding**
+   - Holders may **retain $BAKU** as a speculative asset, reflecting potential value appreciation within the ecosystem.
+
+8. **Utilization (Back to Game)**
+   - **$BAKU tokens** held externally may be **reintegrated** into the game, allowing continued participation and reinforcing the cyclical flow of value.
 
 ---
 
 ## Summary
 
-| Step | Action | Description |
-|------|---------|-------------|
-| 1 | Fish | Earn PEARL in fishing zones |
-| 2 | Craft | Use PEARL for crafting materials and gear |
-| 3 | Mint | Convert PEARL to $BAKU on-chain |
-| 4 | Trade | Use PEARL or $BAKU in markets or DEX |
-| 5 | Hold | Keep $BAKU in your wallet |
-| 6 | Reuse | Bring $BAKU back into the game |
+| Step | Action | From | To | Description |
+|------|---------|------|----|-------------|
+| 1 | Fishing | Regular / Special Zone | PEARL | Earn PEARL from fishing activities |
+| 2 | Crafting | PEARL | Equipment/Material | Utilize PEARL to craft resources |
+| 3 | Minting | PEARL | $BAKU | Convert PEARL into tradeable blockchain token |
+| 4 | Market Usage | PEARL | In-Game Market | Use PEARL in in-game transactions |
+| 5 | Listing | $BAKU | DEX | List token for crypto trading |
+| 6 | Trading | DEX | Seller/Buyer | Exchange $BAKU for other cryptocurrencies |
+| 7 | Holding | Buyer | Wallet | Store $BAKU as a tradable asset |
+| 8 | Utilization | $BAKU | Game | Reintroduce token into gameplay |
 
 ---
 
 ## Notes
-- **PEARL:** In-game currency earned from fishing and crafting.  
-- **$BAKU:** Blockchain token you can trade or use back in-game.  
-- **DEX:** Marketplace for crypto trading outside the game.  
-- The loop never ends — everything you earn can return to gameplay!
+- **Regular Zone:** Standard fishing area with consistent yields.  
+- **Special Time-Limited Zone:** Event-based area offering higher rewards.  
+- **PEARL (Perlas):** Primary in-game currency earned through gameplay and used in crafting or market activity.  
+- **$BAKU:** On-chain representation of game value; tradable and reintegrable into the game.  
+- **DEX:** Decentralized Exchange facilitating open crypto-based transactions.  
