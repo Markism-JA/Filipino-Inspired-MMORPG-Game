@@ -14,7 +14,7 @@ These are the systems that define the moment-to-moment action and the player's b
 ## **Traversal**
 
 - Players shall be allowed to move by walking or using summon mounts.
-- **Fast Travel:** Players can use a summoning scroll (purchasable from merchants) to summon the *Kuchero*, which provides fast travel anywhere on the map.
+- **Fast Travel:** Players can use a summoning scroll (purchasable from merchants) to summon the *Kuchero*, which provides fast travel on different towns and places in the map.
 
 ---
 
@@ -47,7 +47,7 @@ Players can accept quests or missions in the game from NPCs or events that provi
 ## **Inventory System**
 
 Inventories contain slots that house one type of item.  
-- **Stack limit:** 200 items per slot  
+- **Stack limit:** 999 items per slot  
 - **Backpacks:** Increase the player’s total inventory capacity
 
 ---
@@ -55,6 +55,13 @@ Inventories contain slots that house one type of item.
 ## **Trading System**
 
 Players are allowed to buy, sell, or trade loot and resources gathered in the game.
+
+---
+## **Personal Resource Management**
+Players are required to manage:
+- Health - This depletes when another entity inflicted damage on you, skills, attacks, debuffs.
+- Mana - This depletes when the character uses a skill.
+- Stamina - This depletes on combat when sprinting to dodge skills.
 
 ---
 
@@ -127,13 +134,8 @@ Rites or potions provide boosts such as increased fishing rarity, attack damage,
 ## **Gear System**
 
 - Weapons and armor have **durability** and degrade with use.  
-- Items can be **refined**, **upgraded**, or **socketed** to improve stats.
+- Items can be  **upgraded**, or **socketed** to improve stats.
 
----
-
-## **Skill System**
-
-- Players have a **skill tree** unlocked and upgraded through leveling and progression.
 
 ---
 
