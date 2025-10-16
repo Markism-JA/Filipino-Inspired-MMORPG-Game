@@ -102,5 +102,5 @@ To design and develop an **MMORPG integrated with tokenomics and inspired by Fil
     
 8. **To evaluate the system’s effectiveness** in achieving cultural representation, player engagement, and economic balance within a blockchain-based MMORPG environment.
     
-> *Maintained under `docs/lore.md`*  
+> *Maintained under `docs/`*  
 *© Takipsilim Project Team*
