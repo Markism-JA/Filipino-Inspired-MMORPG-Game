@@ -38,7 +38,7 @@ Kaptan, in a rage at this betrayal, struck them all down with divine lightning. 
 
 The world was now born: a divine graveyard, a wounded, living landscape made from the very bodies of the slain gods.
 
-## The Age of Calamity: The Shattering
+## 3. The Age of Calamity: The Shattering
 
 The Architects, Kaptan and Maguayan, were paralyzed by grief. To restore the balance they had broken, they created **Seven Moons** in the sky—six new ones to honor the slain Libulan (Source 4.1).
 
