@@ -34,4 +34,6 @@
     - ["The Baku Core" (The Final Raid)](/docs/game_design/lore/007-main-quest-line.md#the-baku-core-the-final-raid)
     - [Final Boss: "The Aspect of Bakunawa"](/docs/game_design/lore/007-main-quest-line.md#final-boss-the-aspect-of-bakunawa)
     - [Ending Cutscene: "The Last Pearl"](/docs/game_design/lore/007-main-quest-line.md#ending-cutscene-the-last-pearl)
+- [VIII. References](008-references.md)
+- [IX. Creative Liberties and Source Material](009-creative-liberty-and-source.md)
 <!--toc:end-->
