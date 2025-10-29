@@ -10,6 +10,11 @@
 \usepackage{fancyhdr}
 \usepackage{etoolbox}
 \usepackage{textcase}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\usepackage{array}
+\usepackage[style=apa]{biblatex}
 \usepackage[
     colorlinks=true,
     linkcolor=black,
@@ -18,6 +23,7 @@
 ]{hyperref}
 
 \setmainfont{Times New Roman}
+\addbibresource{references.bib}
 
 \renewcommand{\cftdot}{}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdot}}
@@ -35,6 +41,8 @@
   \vspace{1em}
   \hfill Page\par
 }
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 \setlength{\cftsecindent}{0pt}
 \setlength{\cftsubsecindent}{1.5em}
