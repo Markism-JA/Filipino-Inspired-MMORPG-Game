@@ -15,4 +15,57 @@
 \ContactInfo
 \vspace{1cm}
 
+\centering
+{\fontsize{11}{13.5}\selectfont{EDUCATIONAL BACKGROUND}}
+\par
+\vspace{0.3em}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} c c X @{}}
+Level & Inclusive Dates & Name of School/ Institution \\
+\midrule
+\forlistloop{\EducationRow}{\EducationalList} 
+\end{tabular*}
+\vspace{1em}
+
+\newcommand{\EducationRow}[1]{
+    #1 \\
+}
+
+\raggedright
+\fontsize{11}{13.5}\selectfont PROFESSIONAL OR VOLUNTEER EXPERIENCE
+\par
+\vspace{0.3em}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} c c X @{}}
+Inclusive Dates & \shortstack{Nature of Experience/\\ Job Title} & \shortstack{Name and Address of Company or\\ Organization} \\
+\forlistloop{\ProfessionalExperienceRow}{\ProfessionalExperienceList}
+\end{tabular*}
+\vspace{1em}
+
+\newcommand{\ProfessionalExperienceRow}[1]{
+    #1 \\
+}
+
+
+\raggedright
+\fontsize{11}{13.5}\selectfont AFFILIATION
+\par
+\vspace{0.3em}
+
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} c c X @{}}
+Inclusive Dates & Name of Organization & Position \\
+\forlistloop{\AffiliationRow}{\AffiliationList}
+\end{tabular*}
+\vspace{1em}
+
+\newcommand{\AffiliationRow}[1]{
+    #1 \\
+}
+
+\raggedright
+\fontsize{11}{13.5}\selectfont SKILLS
+\par
+\vspace{0.3em}
+
 \clearpage
