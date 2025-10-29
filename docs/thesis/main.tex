@@ -1,0 +1,30 @@
+\input{settings/preamble}
+\input{settings/macros.tex}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\input{00_frontmatter/titlepage.tex}
+
+\pagestyle{fancy}
+
+% Frontmatter
+\input{00_frontmatter/endoresement-form.tex}
+\input{00_frontmatter/approval-sheet}
+\input{00_frontmatter/toc.tex}
+
+\cleardoublepage \newcounter{romanpages}
+\setcounter{romanpages}{\value{page}}
+\pagenumbering{arabic} 
+\setcounter{page}{\value{romanpages}}
+
+% Body
+\chapter{INTRODUCTION}
+\section{Background of the Problem}
+\chapter{METHODOLOGY}
+
+% Backmatter
+\input{ZZ_backmatter/cv_template.tex}
+
+\end{document}
