@@ -1,0 +1,2226 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A description of my awesome project.">
+      
+      
+        <meta name="author" content="Your Name">
+      
+      
+      
+        <link rel="prev" href="../art-and-ui/">
+      
+      
+        <link rel="next" href="../game-style/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>I. Core Mechanics - MMORPG Game Docs</title>
+      
+    
+    
+
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+<style>
+    /* Light Mode Palette */
+    [data-md-color-scheme="default"] {
+        --md-primary-fg-color: #F7F8F9;
+        /* Almost black for headers */
+        --md-primary-fg-color--light: #202020;
+        --md-primary-bg-color: Neutral0;
+        /* Pure white background */
+
+        --md-default-fg-color: #202020;
+        /* Main text color */
+        --md-default-fg-color--light: #707070;
+        /* Lighter text for secondary info */
+        --md-default-fg-color--lighter: #acacac;
+        /* Borders */
+        --md-default-bg-color: #ffffff;
+        /* Main background */
+
+        --md-accent-fg-color: #0052cc;
+        /* A single pop of color for links/accents */
+
+        --md-code-fg-color: #303030;
+        --md-code-bg-color: #f5f5f5;
+        /* Light grey for code blocks */
+
+        --md-typeset-table-color: hsla(0, 0%, 0%, 0.12);
+    }
+
+    /* Dark Mode Palette */
+    [data-md-color-scheme="slate"] {
+        --md-primary-fg-color: #101214;
+        --md-primary-fg-color--light: #d0d0d0;
+        --md-primary-bg-color: #f0f0f0;
+        /* Very dark grey, not pure black */
+        # --md-default-fg-color: #d0d0d0;
+        /* Main text color (off-white) */
+        --md-default-fg-color--light: #909090;
+        /* Lighter text */
+        --md-default-fg-color--lighter: #404040;
+        /* Borders */
+        --md-default-bg-color: #121212;
+
+        --md-accent-fg-color: #3498db;
+
+        --md-code-fg-color: #e0e0e0;
+        --md-code-bg-color: #1e1e1e;
+
+        --md-typeset-table-color: hsla(0, 0%, 100%, 0.12);
+    }
+</style>
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#i-core-mechanics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MMORPG Game Docs" class="md-header__button md-logo" aria-label="MMORPG Game Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MMORPG Game Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              I. Core Mechanics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Project Documentation Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../decisions/0000-ADR-template/" class="md-tabs__link">
+          
+  
+  
+  Decisions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../GDD/" class="md-tabs__link">
+          
+  
+  
+  Game design
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../team/branching/" class="md-tabs__link">
+          
+  
+  
+  Team
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../thesis/01_Introduction/01_INITIAL_PARAGRAPH/" class="md-tabs__link">
+          
+  
+  
+  Thesis
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MMORPG Game Docs" class="md-nav__button md-logo" aria-label="MMORPG Game Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MMORPG Game Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Documentation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Decisions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Decisions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisions/0000-ADR-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADR 0001 — Use C# for Backend Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Game design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Game design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GDD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GDD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../art-and-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Art and ui
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    I. Core Mechanics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    I. Core Mechanics
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hybrid-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Combat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traversal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-gathering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Gathering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#looting-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looting System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trading System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-resource-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Resource Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progression
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Takipsilim — Game Documentation (Issue #6)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Level design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore-style-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Incorporate Lore into Game Style (World &amp; Character Design)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mechanics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../minimum-playable-concept/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core Design Goal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../story-and-lore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Story and lore
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lore
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Lore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/001-cosmology-and-the-ages-of-creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    001 cosmology and the ages of creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/002-divine-pantheons-hierarchy-of-power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    002 divine pantheons hierarchy of power
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/003-the-mortal-realm-geography-and-law/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    III. The Mortal Realm: Geography &amp; Law
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/004-factions-and-peoples-of-the-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IV. Factions &amp; Peoples of the World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/005-the-metaphysics-of-power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    005 the metaphysics of power
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/006-the-legendary-saga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VI. The Legendary Sagas (Player Class Origins)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/007-main-quest-line/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAIN QUEST LORE: "THE TOME OF THE SHATTERED MOON"
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/008-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VIII. References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lore/009-creative-liberty-and-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IX. Creative Liberties and Source Material
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tokenomics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Tokenomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tokenomics/tokenomics-tax-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Token Tax Model Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tokenomics/tokenomics-whitepaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tokenomics Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tokenomics/tokenomics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tokenomics Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Team
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/branching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Branching Guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/code-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code style
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/commit-convention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commit convention
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Communication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decisions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/pull-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pull request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/roles-and-responsibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roles and responsibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../team/workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Team Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Thesis
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Thesis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    01 Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/01_Introduction/01_INITIAL_PARAGRAPH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/01_Introduction/02_BACKGROUND_OF_THE_PROBLEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 BACKGROUND OF THE PROBLEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/01_Introduction/03-OVERVIEW_OF_THE_CURRENT_STATE_OF_TECHNOLOGY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 OVERVIEW OF THE CURRENT STATE OF TECHNOLOGY
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/01_Introduction/04-OBJECTIVES_OF_THE_STUDY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 OBJECTIVES OF THE STUDY
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/01_Introduction/05-SCOPE_AND_LIMITATION_OF_THE_STUDY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 SCOPE AND LIMITATION OF THE STUDY
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/01_Introduction/06-STATEMENT-OF-THE-PROBLEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 STATEMENT OF THE PROBLEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    02 Methodology
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            02 Methodology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/02_Methodology/01_INITIAL_PARAGRAPH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 INITIAL PARAGRAPH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/02_Methodology/02_HARDWARE_SOFTWARE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 HARDWARE SOFTWARE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/02_Methodology/03_CALENDAR_OF_ACTIVITIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 CALENDAR OF ACTIVITIES
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thesis/02_Methodology/04_BUDGETARY_ESTIMATES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 BUDGETARY ESTIMATES
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hybrid-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Combat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traversal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-gathering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Gathering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#looting-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looting System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inventory System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trading System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-resource-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Resource Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progression
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="i-core-mechanics">I. Core Mechanics<a class="headerlink" href="#i-core-mechanics" title="Permanent link">&para;</a></h1>
+<p>These are the systems that define the moment-to-moment action and the player's basic interaction with the world. Without these, the game wouldn't function as a role-playing game.</p>
+<hr />
+<h2 id="hybrid-combat"><strong>Hybrid Combat</strong><a class="headerlink" href="#hybrid-combat" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Targeting:</strong> Often uses a soft lock or target selection system. You can select a target for tracking health and debuffs, but many core abilities still require manual aiming or direction.</li>
+<li><strong>Telegraphs:</strong> The most common mechanic is the use of telegraphs (visible colored areas on the ground) to show where an enemy attack will land. This is borrowed from action combat and forces players to move.</li>
+</ul>
+<hr />
+<h2 id="traversal"><strong>Traversal</strong><a class="headerlink" href="#traversal" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Players shall be allowed to move by walking or using summon mounts.</li>
+<li><strong>Fast Travel:</strong> Players can use a summoning scroll (purchasable from merchants) to summon the <em>Kuchero</em>, which provides fast travel on different towns and places in the map.</li>
+</ul>
+<hr />
+<h2 id="resource-gathering"><strong>Resource Gathering</strong><a class="headerlink" href="#resource-gathering" title="Permanent link">&para;</a></h2>
+<p>Players can interact with ores, trees, water, etc., to gather resources or generate materials for progression within the game.</p>
+<ul>
+<li><strong>Trees:</strong> Crafting materials, foraging  </li>
+<li><strong>Mining:</strong> Crafting materials  </li>
+<li><strong>Fishing:</strong> There are fishing spots or ponds ingame where players are allowed to farm pearls.</li>
+<li><strong>Pearl:</strong> Rarest drop — 5% chance to get 20 pearls, 1% to get 100 pearls  </li>
+<li><strong>Fish:</strong> Different rarities; varying drop rates depending on type  </li>
+<li><strong>Seaweed:</strong> Common drop — 50% chance to get  </li>
+</ul>
+<hr />
+<h2 id="looting-system"><strong>Looting System</strong><a class="headerlink" href="#looting-system" title="Permanent link">&para;</a></h2>
+<p>Enemies drop loot bags containing items of different rarity depending on color (e.g., <strong>purple – rare</strong>, <strong>brown – common</strong>, <strong>blue – uncommon</strong>, etc.).<br />
+Each monster has its own unique drop, but all monsters provide common resources like <strong>“pilak” (silver)</strong> and experience for leveling.</p>
+<hr />
+<h2 id="questing"><strong>Questing</strong><a class="headerlink" href="#questing" title="Permanent link">&para;</a></h2>
+<p>Players can accept quests or missions in the game from NPCs or events that provide rewards depending on quest difficulty and rarity.
+Quests can either be a Resource Gathering request or a Combat Quests (Mob Slaying).
+- Main Quests(Mandatory) - Players are required to tackle the main quests to unlock regions and increase their max lvl cap.
+- Side Quests(Optional) - Players encounter NPC's that may give them a quest finishing said objectives would reward them with resources.
+- Event Quests(Timely) - Event quests are limited-time events quests for everyone to participate, these give significantly better rewards than normal quests.</p>
+<hr />
+<h2 id="inventory-system"><strong>Inventory System</strong><a class="headerlink" href="#inventory-system" title="Permanent link">&para;</a></h2>
+<p>Inventories contain slots that house one type of item.<br />
+- <strong>Stack limit:</strong> 999 items per slot<br />
+- <strong>Backpacks:</strong> Increase the player’s total inventory capacity</p>
+<hr />
+<h2 id="trading-system"><strong>Trading System</strong><a class="headerlink" href="#trading-system" title="Permanent link">&para;</a></h2>
+<p>Players are allowed to buy, sell, or trade loot and resources gathered in the game.</p>
+<hr />
+<h2 id="personal-resource-management"><strong>Personal Resource Management</strong><a class="headerlink" href="#personal-resource-management" title="Permanent link">&para;</a></h2>
+<p>Players are required to manage:
+- Health - This depletes when another entity inflicted damage on you, skills, attacks, debuffs.
+- Mana - This depletes when the character uses a skill.
+- Stamina - This depletes on combat when sprinting to dodge skills.</p>
+<hr />
+<h2 id="progression"><strong>Progression</strong><a class="headerlink" href="#progression" title="Permanent link">&para;</a></h2>
+<p>Characters can progress by:
+- Leveling up<br />
+- Upgrading gear<br />
+- Improving skills  </p>
+<p>This progression is the core goal — to become stronger and tackle more difficult challenges.</p>
+<hr />
+<h1 id="ii-secondary-supporting-mechanics">II. Secondary &amp; Supporting Mechanics<a class="headerlink" href="#ii-secondary-supporting-mechanics" title="Permanent link">&para;</a></h1>
+<p>These systems layer on top of Core Mechanics, providing depth, progression, risk, and social interaction. They are what keep the player logging in day after day.</p>
+<hr />
+<h2 id="boost-system"><strong>Boost System</strong><a class="headerlink" href="#boost-system" title="Permanent link">&para;</a></h2>
+<p>Rites or potions provide boosts such as increased fishing rarity, attack damage, or movement speed.</p>
+<ul>
+<li><strong>Potions:</strong> Available at the <em>babaylan</em> or shaman; can be bought or crafted by providing materials to the NPC.  </li>
+<li><strong>Rites:</strong> Statues or totems provide boosts when given offerings — the boost depends on the offering type.</li>
+</ul>
+<hr />
+<h2 id="death-penalties"><strong>Death Penalties</strong><a class="headerlink" href="#death-penalties" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Character death causes a <strong>10% loss of experience points</strong>.  </li>
+<li><strong>Respawn timer:</strong> 40 seconds before respawning in a safe zone or town.  </li>
+<li>Players can restore 10% of lost experience <strong>twice a day</strong>.</li>
+</ul>
+<hr />
+<h2 id="fiat-system"><strong>Fiat System</strong><a class="headerlink" href="#fiat-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The main currency in the game is <strong>“Pilak”</strong>, used for most transactions.</li>
+</ul>
+<hr />
+<h2 id="dungeons-raids"><strong>Dungeons / Raids</strong><a class="headerlink" href="#dungeons-raids" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Challenging areas with bosses and enemies.  </li>
+<li>Require teamwork and offer better rewards than standard overworld farming.  </li>
+<li>May include special timed events.</li>
+<li>Clan vs Clan type of raids a statue near the largest fishing spot is to be captured by a clan.</li>
+</ul>
+<hr />
+<h2 id="guild-clan-system"><strong>Guild / Clan System</strong><a class="headerlink" href="#guild-clan-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A social organization of players with features like:</li>
+<li>Guild house  </li>
+<li>Quests  </li>
+<li>Treasury</li>
+<li>Clans have a hierarchy system, where the leader is called datu, maharlika, maginoo etc.</li>
+<li>Encourages teamwork and cooperative gameplay.</li>
+</ul>
+<hr />
+<h2 id="party-system"><strong>Party System</strong><a class="headerlink" href="#party-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Players can form parties to tackle challenges together.  </li>
+<li>Shared experience points and loot.  </li>
+<li>Raid and dungeon difficulty scales with party size.</li>
+</ul>
+<hr />
+<h2 id="gear-system"><strong>Gear System</strong><a class="headerlink" href="#gear-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Weapons and armor have <strong>durability</strong> and degrade with use.  </li>
+<li>Items can be  <strong>upgraded</strong>, or <strong>socketed</strong> to improve stats.</li>
+</ul>
+<hr />
+<h2 id="events"><strong>Events</strong><a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Daily, weekly, or seasonal</strong> events that reward players for participation and activity.  </li>
+<li>Help players progress and encourage consistent play.</li>
+</ul>
+<hr />
+<h1 id="iii-emergent-mechanics">III. Emergent Mechanics<a class="headerlink" href="#iii-emergent-mechanics" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="marketplace"><strong>Marketplace</strong><a class="headerlink" href="#marketplace" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Player-to-player trading system.  </li>
+<li>Allows buy/sell orders for resources.  </li>
+<li>Transactions require a small fee.</li>
+</ul>
+<hr />
+<h2 id="character-class"><strong>Character Class</strong><a class="headerlink" href="#character-class" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Player class depends on equipped gear and unlocked skills.  </li>
+<li>Mandirigma (Warrior) — Close-range fighter; excels in sustained melee and crowd control.</li>
+<li>Babaylan (Mystic) — Channeler of spiritual energy; heals and debuffs enemies.</li>
+<li>Albularyo (Tactician) — Hybrid support; deploys concoctions, traps, and poisons.</li>
+<li>Bagani (Ranger) — Agile ranged attacker with precision-based skill chaining.</li>
+</ul>
+<hr />
+<h2 id="guild-events"><strong>Guild Events</strong><a class="headerlink" href="#guild-events" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Limited-time competitive events between guilds.  </li>
+<li>Rewards for participation and contribution.</li>
+</ul>
+<hr />
+<h2 id="pvp-danger-zone"><strong>PVP / Danger Zone</strong><a class="headerlink" href="#pvp-danger-zone" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Designated zones where players can fight and kill each other.  </li>
+<li>Offer rare and valuable resources as high-risk, high-reward areas.</li>
+</ul>
+<hr />
+<h2 id="bounties"><strong>Bounties</strong><a class="headerlink" href="#bounties" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Players who kill others are marked with a bounty.  </li>
+<li>Encourages PVP combat among “PKers” and prevents zone camping or domination.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.top", "search.suggest", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
