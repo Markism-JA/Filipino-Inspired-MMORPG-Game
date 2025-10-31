@@ -37,21 +37,25 @@
 
 \renewcommand{\contentsname}{\hfill\bfseries\normalsize TABLE OF CONTENTS\hfill}
 \renewcommand{\cftaftertoctitle}{
-  \par
-  \vspace{1em}
-  \hfill Page\par
+    \par
+    \vspace{1em}
+    \hfill Page\par
 }
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 
-\setlength{\cftsecindent}{0pt}
-\setlength{\cftsubsecindent}{1.5em}
-\setlength{\cftbeforesecskip}{1ex}
-\setlength{\cftbeforesubsecskip}{0pt}
-
+\setlength{\cftsecindent}{0pt} 
 \setlength{\cftsecnumwidth}{5em}
 
-\setlength{\parindent}{0pt}
+\setlength{\cftsubsecindent}{0pt}
+\setlength{\cftsubsecnumwidth}{7em}
+
+\setlength{\cftsubsubsecindent}{0pt}
+\setlength{\cftsubsubsecnumwidth}{9em}
+
+\setlength{\cftbeforesecskip}{1ex}
+\setlength{\cftbeforesubsecskip}{0pt}
+\setlength{\cftbeforesubsubsecskip}{0pt}
 
 \geometry{left=1.50in, right=1in, top=1in, bottom=0.75in}
 
